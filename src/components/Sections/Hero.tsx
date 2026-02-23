@@ -1,9 +1,12 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiCode } from "react-icons/fi";
 import { FaReact, FaDocker } from "react-icons/fa";
 import { SiRedux, SiNodedotjs, SiTypescript } from "react-icons/si";
-import profileImg from "@/assets/gojo.png";
+import gojo from "../../assets/gojo.png";
 
 const Hero: React.FC = () => {
   const [text, setText] = useState("");
@@ -83,14 +86,18 @@ const Hero: React.FC = () => {
       overflow-hidden
       flex items-center justify-center"
         >
-          <img
-            src={profileImg}
+          <Image
+            src={gojo}
             alt="Profile"
+            width={650}
+            height={650}
             className="
         w-full h-full
         object-cover
         drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]
       "
+            priority
+            unoptimized
           />
         </div>
       </div>
@@ -104,7 +111,6 @@ const Hero: React.FC = () => {
                 z-20 
                 hidden lg:block"
       >
-        {/* Top */}
         <motion.div
           animate={{ y: [-6, 6, -6] }}
           transition={{ duration: 5, repeat: Infinity }}
@@ -113,7 +119,6 @@ const Hero: React.FC = () => {
           <FaReact size={24} className="text-cyan-400" />
         </motion.div>
 
-        {/* Upper Mid */}
         <motion.div
           animate={{ y: [6, -6, 6] }}
           transition={{ duration: 6, repeat: Infinity }}
@@ -122,7 +127,6 @@ const Hero: React.FC = () => {
           <SiRedux size={22} className="text-purple-400" />
         </motion.div>
 
-        {/* Center */}
         <motion.div
           animate={{ y: [-8, 8, -8] }}
           transition={{ duration: 7, repeat: Infinity }}
@@ -131,7 +135,6 @@ const Hero: React.FC = () => {
           <SiNodedotjs size={22} className="text-green-400" />
         </motion.div>
 
-        {/* Lower Mid */}
         <motion.div
           animate={{ y: [5, -5, 5] }}
           transition={{ duration: 6.5, repeat: Infinity }}
@@ -140,7 +143,6 @@ const Hero: React.FC = () => {
           <SiTypescript size={22} className="text-blue-400" />
         </motion.div>
 
-        {/* Bottom */}
         <motion.div
           animate={{ y: [-6, 6, -6] }}
           transition={{ duration: 5.5, repeat: Infinity }}
@@ -152,16 +154,16 @@ const Hero: React.FC = () => {
 
       {/* BOTTOM SOCIAL ICONS */}
       <div className="flex lg:absolute lg:left-16 lg:bottom-12 mt-16 lg:mt-0 flex-row lg:flex-col gap-4 lg:space-y-6 z-20 justify-center mb-4">
-        <a href="https://linkedin.com/in/sumit-kumar-7b8355236/" className="w-11 h-11 flex items-center justify-center bg-white rounded-full text-black" target="_blank">
+        <a href="https://linkedin.com/in/sumit-kumar-7b8355236/" className="w-11 h-11 flex items-center justify-center bg-white rounded-full text-black" target="_blank" rel="noopener noreferrer">
           <FiLinkedin />
         </a>
-        <a href="https://github.com/SumitKumarSS" className="w-11 h-11 flex items-center justify-center bg-white rounded-full text-black" target="_blank">
+        <a href="https://github.com/SumitKumarSS" className="w-11 h-11 flex items-center justify-center bg-white rounded-full text-black" target="_blank" rel="noopener noreferrer">
           <FiGithub />
         </a>
-        <a href="https://www.leetcode.com/kishan141" className="w-11 h-11 flex items-center justify-center bg-white rounded-full text-black" target="_blank">
+        <a href="https://www.leetcode.com/kishan141" className="w-11 h-11 flex items-center justify-center bg-white rounded-full text-black" target="_blank" rel="noopener noreferrer">
           <FiCode />
         </a>
-        <a href="mailto:sumitkumarnhk@gmail.com" className="w-11 h-11 flex items-center justify-center bg-white rounded-full text-black" target="_blank">
+        <a href="mailto:sumitkumarnhk@gmail.com" className="w-11 h-11 flex items-center justify-center bg-white rounded-full text-black" target="_blank" rel="noopener noreferrer">
           <FiMail />
         </a>
       </div>

@@ -57,47 +57,32 @@
   --radius: 0.75rem;
 
   --sidebar-background: 0 0% 98%;
-
   --sidebar-foreground: 240 5.3% 26.1%;
-
   --sidebar-primary: 240 5.9% 10%;
-
   --sidebar-primary-foreground: 0 0% 98%;
-
   --sidebar-accent: 240 4.8% 95.9%;
-
   --sidebar-accent-foreground: 240 5.9% 10%;
-
   --sidebar-border: 220 13% 91%;
-
   --sidebar-ring: 217.2 91.2% 59.8%;
 }
 
 .dark {
   --background: 222.2 84% 4.9%;
   --foreground: 210 40% 98%;
-
   --card: 222.2 84% 4.9%;
   --card-foreground: 210 40% 98%;
-
   --popover: 222.2 84% 4.9%;
   --popover-foreground: 210 40% 98%;
-
   --primary: 210 40% 98%;
   --primary-foreground: 222.2 47.4% 11.2%;
-
   --secondary: 217.2 32.6% 17.5%;
   --secondary-foreground: 210 40% 98%;
-
   --muted: 217.2 32.6% 17.5%;
   --muted-foreground: 215 20.2% 65.1%;
-
   --accent: 217.2 32.6% 17.5%;
   --accent-foreground: 210 40% 98%;
-
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 210 40% 98%;
-
   --border: 217.2 32.6% 17.5%;
   --input: 217.2 32.6% 17.5%;
   --ring: 212.7 26.8% 83.9%;
@@ -111,10 +96,6 @@
   --sidebar-ring: 217.2 91.2% 59.8%;
 }
 
-/* * {
-  border-color: hsl(var(--border));
-} */
-
 body {
   background: text-foreground font-inter overflow-x-hidden;
   scroll-behavior: smooth;
@@ -124,11 +105,10 @@ html {
   scroll-behavior: smooth;
 }
 
-
 section {
   scroll-margin-top: 80px;
 }
-/* Custom gradient text */
+
 .gradient-text {
   background: var(--gradient-text);
   -webkit-background-clip: text;
@@ -136,7 +116,6 @@ section {
   background-clip: text;
 }
 
-/* Glow effects */
 .glow {
   filter: drop-shadow(var(--shadow-glow));
 }
@@ -151,14 +130,12 @@ section {
   transform: translateY(-5px);
 }
 
-/* Animated background */
 .animated-bg {
   background: var(--gradient-hero);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
 }
 
-/* Button variants */
 .btn-hero {
   background: var(--gradient-primary);
   transition: var(--transition-bounce);
@@ -191,13 +168,11 @@ section {
   box-shadow: var(--shadow-elevation);
 }
 
-/* Typewriter cursor */
 .typewriter-cursor::after {
   content: "|";
   animation: blink 1s infinite;
 }
 
-/* Skill progress bars */
 .skill-card {
   background: var(--gradient-card);
   backdrop-filter: blur(10px);
@@ -210,7 +185,6 @@ section {
   box-shadow: var(--shadow-glow);
 }
 
-/* Project cards */
 .project-card {
   background: var(--gradient-card);
   border: 1px solid hsl(var(--border));
@@ -240,14 +214,12 @@ section {
   box-shadow: var(--shadow-elevation);
 }
 
-/* Navigation */
 .nav-glass {
   backdrop-filter: blur(20px);
   background: hsl(var(--background) / 0.8);
   border-bottom: 1px solid hsl(var(--border) / 0.5);
 }
 
-/* Scroll indicator */
 .scroll-indicator {
   position: fixed;
   top: 0;
@@ -259,48 +231,25 @@ section {
   z-index: 50;
 }
 
-/* Custom animations */
 @keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
 @keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
-  }
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
 }
 
 .animate-float {
@@ -315,31 +264,11 @@ section {
   animation: gradientShift 15s ease infinite;
 }
 
-/* Custom blinking animation */
-@keyframes blink {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: var(--tw-border-opacity, 1); }
-}
-
-.animate-blink {
-  animation: blink 1s steps(2, start) infinite;
-}
-
-/* Optional glowing gradient text */
-.gradient-text {
-  background: linear-gradient(to right, #f43f5e, #f59e0b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.glow {
-  text-shadow: 0 0 8px rgba(255, 99, 132, 0.5);
-}
-
 @keyframes pulse {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 0.7; }
 }
+
 .animate-pulse-slow {
   animation: pulse 6s ease-in-out infinite;
 }
@@ -352,28 +281,17 @@ canvas#dotCanvas {
   opacity: 0.8;
 }
 
-
-/* gradient-text */
-.gradient-text {
-  background: linear-gradient(90deg, #a855f7, #ec4899, #facc15);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* gradient-card */
 .bg-gradient-card {
   background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
   backdrop-filter: blur(12px);
 }
 
-/* button gradient */
 .btn-gradient {
   background: linear-gradient(to right, #a855f7, #ec4899, #facc15);
   color: white;
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
 }
 
-/* background-dot-motion */
 .animated-dots-bg::before {
   content: "";
   position: absolute;
@@ -384,10 +302,6 @@ canvas#dotCanvas {
 }
 
 @keyframes moveDots {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100px 100px;
-  }
+  from { background-position: 0 0; }
+  to { background-position: 100px 100px; }
 }

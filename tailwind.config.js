@@ -2,11 +2,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
-	  "./index.html",
 	  "./src/**/*.{js,ts,jsx,tsx}",
+	  "./src/app/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
 	  extend: {
+	    fontFamily: {
+	      inter: ["var(--font-inter)", "sans-serif"],
+	      poppins: ["var(--font-poppins)", "sans-serif"],
+	      "fira-code": ["var(--font-fira-code)", "monospace"],
+	    },
 		colors: {
 		  background: 'hsl(var(--background) / <alpha-value>)',
 		  foreground: 'hsl(var(--foreground) / <alpha-value>)',

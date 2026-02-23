@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from "react-icons/fi";
@@ -52,7 +54,7 @@ const Footer: React.FC = () => {
             >
               <FiArrowUp size={20} />
             </Button>
-            <p className="text-sm text-white/60">© {new Date().getFullYear()} Kishan Kumar. All rights reserved.</p>
+            <p className="text-sm text-white/60">© {new Date().getFullYear()} Sumit Kumar. All rights reserved.</p>
           </motion.div>
         </div>
 
