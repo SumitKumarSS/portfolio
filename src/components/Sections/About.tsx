@@ -207,17 +207,19 @@ const About = () => {
 
                     {"cgpa" in item && item.cgpa && <h4 className="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 text-transparent bg-clip-text text-xl font-bold mb-3">{item.cgpa}</h4>}
 
-                    {typeof item.description === "string" ? (
-                      <p className="text-white/70">{item.description}</p>
-                    ) : (
-                      <ul className="space-y-3 text-white/70 leading-relaxed">
-                        {item.description?.map((point: string, i: number) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span className="w-2 h-2 mt-2 bg-pink-400 rounded-full flex-shrink-0"></span>
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
+                    {"description" in item && item.description && (
+                      typeof item.description === "string" ? (
+                        <p className="text-white/70">{item.description}</p>
+                      ) : (
+                        <ul className="space-y-3 text-white/70 leading-relaxed">
+                          {item.description?.map((point: string, i: number) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="w-2 h-2 mt-2 bg-pink-400 rounded-full flex-shrink-0"></span>
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      )
                     )}
                   </VerticalTimelineElement>
                 );
