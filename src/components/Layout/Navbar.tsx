@@ -63,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="text-2xl font-extrabold font-poppins bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">SS</div>
+            <div className="text-2xl font-extrabold font-poppins bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">SK</div>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-8">
